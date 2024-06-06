@@ -1,0 +1,40 @@
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .menu-button {
+    display: none;
+  }
+  
+  .spacer {
+    flex: 1 1 auto;
+  }
+  
+  .top-nav-items {
+    display: flex;
+    align-items: center;
+  }
+  
+  .top-nav-items a {
+    margin: 0 10px;
+  }
+  
+  mat-sidenav-container {
+    height: calc(100vh - 64px);
+  }
+  
+  @media (max-width: 992px) {
+    .menu-button {
+      display: block;
+    }
+  
+    .top-nav-items {
+      display: none;
+    }
+  
+    mat-sidenav-container {
+      height: calc(100vh - 56px);
+    }
+  }
