@@ -4,6 +4,7 @@ import { Product } from '../models/product';
 import { MatTableDataSource } from '@angular/material/table';
 import { FormProductosComponent } from '../form-productos/form-productos.component';
 import { MatDialog } from '@angular/material/dialog';
+import { EliminarProductoComponent } from '../eliminar-producto/eliminar-producto.component';
 
 @Component({
   selector: 'app-lista-productos',
@@ -73,5 +74,18 @@ export class ListaProductosComponent implements OnInit {
         this.productListMethod();
       }
     })
+  }
+
+  deleteDialog(element: Product) {
+    const dialogRef = this.dialog.open(EliminarProductoComponent, {
+
+    })
+    dialogRef.afterClosed().subscribe((result: any) => {
+      console.log('The dialog was closed');
+      if (result) {
+        this.productListMethod();
+      }
+    })
+
   }
 }

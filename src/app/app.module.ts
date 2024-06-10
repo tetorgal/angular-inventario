@@ -28,6 +28,7 @@ import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { FormProductosComponent } from './form-productos/form-productos.component';
+import { EliminarProductoComponent } from './eliminar-producto/eliminar-producto.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { FormProductosComponent } from './form-productos/form-productos.componen
     InicioComponent,
     ProductosComponent,
     ListaProductosComponent,
-    FormProductosComponent
+    FormProductosComponent,
+    EliminarProductoComponent
   ],
   imports: [
     BrowserModule,
