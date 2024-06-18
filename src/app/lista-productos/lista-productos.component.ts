@@ -4,7 +4,7 @@ import { Product } from '../models/product';
 import { MatTableDataSource } from '@angular/material/table';
 import { FormProductosComponent } from '../form-productos/form-productos.component';
 import { MatDialog } from '@angular/material/dialog';
-import { EliminarProductoComponent } from '../eliminar-producto/eliminar-producto.component';
+import { ConfirmarEliminarComponent } from '../confirmar-eliminar/confirmar-eliminar.component';
 
 @Component({
   selector: 'app-lista-productos',
@@ -14,7 +14,7 @@ import { EliminarProductoComponent } from '../eliminar-producto/eliminar-product
 export class ListaProductosComponent implements OnInit {
   filterValue: string = '';
   productsList: Product[] = []
-  displayedColumns: string[] = ['name', 'price', 'category', 'description', 'amount', 'status', 'opciones'];
+  columnsHeader=["date","name","price","amount","status","opciones"]
   dataSource = new MatTableDataSource<Product>(this.productsList);
   constructor(private productService: ProductosService, private dialog: MatDialog) { }
 
@@ -63,29 +63,39 @@ export class ListaProductosComponent implements OnInit {
     });
   }
 
-  editDialog(element: Product) {
-    const dialogRef = this.dialog.open(FormProductosComponent, {
-      data: element,
+  deleteDialog(id: string) {
+    const dialogRef = this.dialog.open(ConfirmarEliminarComponent, {
+      data: null,
     });
 
     dialogRef.afterClosed().subscribe((result: any) => {
       console.log('The dialog was closed');
       if (result) {
-        this.productListMethod();
+        this.deleteProduct(id)
       }
-    })
+    });
   }
 
-  deleteDialog(element: Product) {
-    const dialogRef = this.dialog.open(EliminarProductoComponent, {
+  deleteProduct(id: string) {
+    try {
+      this.productService.delete(id).subscribe(item => console.log(item))
+      this.productListMethod();
 
-    })
-    dialogRef.afterClosed().subscribe((result: any) => {
-      console.log('The dialog was closed');
+    } catch (error) {
+
+    }
+  }
+
+  editDialog(product: Product) {
+    const dialogRef = this.dialog.open(FormProductosComponent, {
+      data: product, // Asegúrate de que esto incluya el _id
+    });
+  
+    dialogRef.afterClosed().subscribe(result => {
       if (result) {
-        this.productListMethod();
+        this.productListMethod(); 
       }
-    })
-
+    });
   }
+
 }

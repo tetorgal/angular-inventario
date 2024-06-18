@@ -3,12 +3,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { InicioComponent } from './inicio/inicio.component';
 import { ProductosComponent } from './productos/productos.component';
 import { ListaProductosComponent } from './lista-productos/lista-productos.component';
+import { ListaUsuariosComponent } from './lista-usuarios/lista-usuarios.component';
 
 
 const routes: Routes = [
   { path: '', redirectTo: '/inicio', pathMatch: 'full' },
   { path: 'inicio', component: InicioComponent },
   { path: 'productos', component: ListaProductosComponent },
+  { path: 'usuarios', component: ListaUsuariosComponent },
   { path: '**', redirectTo: '/inicio' }  // Ruta comodín para URLs no encontradas
 ];
 

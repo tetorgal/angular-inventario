@@ -7,10 +7,10 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-eliminar-producto',
-  templateUrl: './eliminar-producto.component.html',
-  styleUrls: ['./eliminar-producto.component.css']
+  templateUrl: './confirmar-eliminar.component.html',
+  styleUrls: ['./confirmar-eliminar.component.css']
 })
-export class EliminarProductoComponent {
+export class ConfirmarEliminarComponent {
 
 
 

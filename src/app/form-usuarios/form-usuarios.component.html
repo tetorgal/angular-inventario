@@ -1,0 +1,48 @@
+<h2 mat-dialog-title *ngIf="!data">Agregar Usuario</h2>
+<h2 mat-dialog-title *ngIf="data">Editar Usuario</h2>
+
+<mat-dialog-content>
+  <form [formGroup]="formGroup">
+    <mat-form-field appearance="outline">
+      <mat-label>Nombre de Usuario</mat-label>
+      <input matInput placeholder="Nombre de Usuario" formControlName="username">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Nombre</mat-label>
+      <input matInput placeholder="Nombre" formControlName="name">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Apellido</mat-label>
+      <input matInput placeholder="Apellido" formControlName="lastName">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Correo Electrónico</mat-label>
+      <input matInput placeholder="Correo Electrónico" formControlName="email" type="email">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Teléfono</mat-label>
+      <input matInput placeholder="Teléfono" formControlName="phone">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Contraseña</mat-label>
+      <input matInput placeholder="Contraseña" formControlName="password" type="password">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Rol</mat-label>
+      <input matInput placeholder="Rol" formControlName="role">
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-raised-button color="primary" (click)="save()" [disabled]="formGroup.invalid">
+    Guardar
+  </button>
+  <button mat-raised-button color="warn" mat-dialog-close>Cancelar</button>
+</mat-dialog-actions>

@@ -8,7 +8,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { ProductosComponent } from './productos/productos.component';
 import { ListaProductosComponent } from './lista-productos/lista-productos.component';
-
+import { MatSelectModule } from '@angular/material/select';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -28,7 +28,11 @@ import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { FormProductosComponent } from './form-productos/form-productos.component';
-import { EliminarProductoComponent } from './eliminar-producto/eliminar-producto.component';
+import { ConfirmarEliminarComponent } from './confirmar-eliminar/confirmar-eliminar.component';
+import { ListaUsuariosComponent } from './lista-usuarios/lista-usuarios.component';
+import { FormUsuariosComponent } from './form-usuarios/form-usuarios.component';
+import { MatOption, MatOptionModule } from '@angular/material/core';
+
 
 @NgModule({
   declarations: [
@@ -38,7 +42,9 @@ import { EliminarProductoComponent } from './eliminar-producto/eliminar-producto
     ProductosComponent,
     ListaProductosComponent,
     FormProductosComponent,
-    EliminarProductoComponent
+    ConfirmarEliminarComponent,
+    ListaUsuariosComponent,
+    FormUsuariosComponent
   ],
   imports: [
     BrowserModule,
@@ -58,7 +64,10 @@ import { EliminarProductoComponent } from './eliminar-producto/eliminar-producto
     CommonModule,
     MatInputModule,
     MatDialogModule,
-    
+    MatOptionModule,
+    MatSelectModule,
+    ReactiveFormsModule
+
 
 
   ],
