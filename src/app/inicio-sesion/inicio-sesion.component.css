@@ -1,0 +1,43 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .card {
+    width: 400px; /* increased width */
+    margin: 20px;
+    display: flex; /* added */
+    flex-direction: column; /* added */
+    align-items: center; /* added */
+  }
+  
+  .mat-form-field {
+    width: 100%;
+    margin-bottom: 10px; /* added */
+  }
+  
+  .login-button {
+    width: 100%; /* added */
+    text-align: center; /* added */
+    margin-bottom: 10px; /* added */
+  }
+  
+  .mat-card-header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .mat-card-title {
+    font-size: 24px;
+    text-align: center; /* added */
+margin-bottom: 10px;
+  }
+  
+  .mat-icon {
+    cursor: pointer;
+  }

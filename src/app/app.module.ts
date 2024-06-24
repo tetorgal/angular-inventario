@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './navbar/navbar.component';
 import { InicioComponent } from './inicio/inicio.component';
-import { ProductosComponent } from './productos/productos.component';
 import { ListaProductosComponent } from './lista-productos/lista-productos.component';
 import { MatSelectModule } from '@angular/material/select';
 import { MatIconModule } from '@angular/material/icon';
@@ -31,7 +30,9 @@ import { FormProductosComponent } from './form-productos/form-productos.componen
 import { ConfirmarEliminarComponent } from './confirmar-eliminar/confirmar-eliminar.component';
 import { ListaUsuariosComponent } from './lista-usuarios/lista-usuarios.component';
 import { FormUsuariosComponent } from './form-usuarios/form-usuarios.component';
-import { MatOption, MatOptionModule } from '@angular/material/core';
+import { MatOptionModule } from '@angular/material/core';
+import { InicioSesionComponent } from './inicio-sesion/inicio-sesion.component';
+import { CatalogoProductosComponent } from './catalogo-productos/catalogo-productos.component';
 
 
 @NgModule({
@@ -39,12 +40,13 @@ import { MatOption, MatOptionModule } from '@angular/material/core';
     AppComponent,
     NavbarComponent,
     InicioComponent,
-    ProductosComponent,
     ListaProductosComponent,
     FormProductosComponent,
     ConfirmarEliminarComponent,
     ListaUsuariosComponent,
-    FormUsuariosComponent
+    FormUsuariosComponent,
+    InicioSesionComponent,
+    CatalogoProductosComponent
   ],
   imports: [
     BrowserModule,
@@ -66,7 +68,9 @@ import { MatOption, MatOptionModule } from '@angular/material/core';
     MatDialogModule,
     MatOptionModule,
     MatSelectModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatCardModule,
+    MatIconModule,
 
 
 

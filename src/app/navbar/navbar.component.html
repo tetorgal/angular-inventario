@@ -7,11 +7,19 @@
 
   <!-- Opciones del menú en la barra superior -->
   <div class="top-nav-items">
-    <a mat-button routerLink="/inicio">Inicio</a>
-    <a mat-button routerLink="/productos">Productos</a>
-    <a mat-button routerLink="/usuarios">Usuarios</a>
+    <a mat-button routerLink="/inicio">
+      <mat-icon>home</mat-icon> Inicio
+    </a>
+    <a mat-button routerLink="/productos">
+      <mat-icon>store</mat-icon> Productos
+    </a>
+    <a mat-button routerLink="/catalogo">
+      <mat-icon>book</mat-icon> Catálogo
+    </a>
+    <a mat-button routerLink="/usuarios">
+      <mat-icon>group</mat-icon> Usuarios
+    </a>
   </div>
-
 </mat-toolbar>
 
 <mat-sidenav-container>
@@ -22,9 +30,18 @@
     (closedStart)="sidebarOpen = false"
   >
     <mat-nav-list>
-      <a mat-list-item routerLink="/inicio">Inicio</a>
-      <a mat-list-item routerLink="/productos">Productos</a>
-      <a mat-list-item routerLink="/usuarios">Usuarios</a>
+      <a mat-list-item routerLink="/inicio">
+        <mat-icon>home</mat-icon> Inicio
+      </a>
+      <a mat-list-item routerLink="/productos">
+        <mat-icon>store</mat-icon> Productos
+      </a>
+      <a mat-list-item routerLink="/catalogo">
+        <mat-icon>book</mat-icon> Catálogo
+      </a>
+      <a mat-list-item routerLink="/usuarios">
+        <mat-icon>group</mat-icon> Usuarios
+      </a>
     </mat-nav-list>
   </mat-sidenav>
 

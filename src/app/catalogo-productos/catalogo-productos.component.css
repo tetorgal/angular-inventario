@@ -1,0 +1,86 @@
+.container {
+    display: flex;
+  }
+  
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 16px;
+    padding: 16px;
+    flex: 3;
+  }
+  
+  .product-card {
+    position: relative;
+  }
+  
+  .mat-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+  
+  mat-card-title {
+    text-transform: capitalize;
+    flex: 1;
+  }
+  
+  .info-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  
+  .product-description {
+    color: #8f8f8f;
+  }
+  
+  .product-price {
+    color: #3f51b5;
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+  
+  .add-button {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+  }
+  
+  .sidenav-container {
+    margin-top: 20px;
+    flex: 1;
+  }
+  
+  .sidenav-container {
+    margin-top: 20px;
+    flex: 1;
+  }
+  
+  .product-details {
+    padding: 16px;
+  }
+  
+  .product-details h2 {
+    margin-bottom: 16px;
+  }
+  
+  .product-detail-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  
+  .product-detail-item mat-icon {
+    margin-right: 8px;
+    color: #3f51b5;
+  }
+  
+  .mat-toolbar {
+    margin-bottom: 16px;
+  }
+  mat-sidenav {
+    width: 300px; /* Fija el ancho del sidenav */
+    max-width: 300px; /* Asegura que no exceda este ancho */
+  }
