@@ -1,0 +1,20 @@
+<div class="carrito-container">
+    <h2>Carrito de Compras</h2>
+    <ng-container *ngIf="(carritoItems$ | async)?.length; else emptyCart">
+      <div *ngFor="let item of carritoItems$ | async" class="carrito-item">
+        <div class="carrito-item-details">
+          <mat-icon>shopping_cart</mat-icon>
+          <span>{{ item.name }} - {{ item.price | currency }} (x{{ item.amount }})</span>
+        </div>
+        <button mat-icon-button color="warn" (click)="removeItem(item)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </div>
+      <div class="total">
+        <strong>Total: {{ total$ | async | currency }}</strong>
+      </div>
+    </ng-container>
+    <ng-template #emptyCart>
+      <p class="empty-cart">Tu carrito está vacío</p>
+    </ng-template>
+  </div>

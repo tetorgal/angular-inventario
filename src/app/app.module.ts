@@ -33,6 +33,7 @@ import { FormUsuariosComponent } from './form-usuarios/form-usuarios.component';
 import { MatOptionModule } from '@angular/material/core';
 import { InicioSesionComponent } from './inicio-sesion/inicio-sesion.component';
 import { CatalogoProductosComponent } from './catalogo-productos/catalogo-productos.component';
+import { CarritoComprasComponent } from './carrito-compras/carrito-compras.component';
 
 
 @NgModule({
@@ -46,7 +47,8 @@ import { CatalogoProductosComponent } from './catalogo-productos/catalogo-produc
     ListaUsuariosComponent,
     FormUsuariosComponent,
     InicioSesionComponent,
-    CatalogoProductosComponent
+    CatalogoProductosComponent,
+    CarritoComprasComponent
   ],
   imports: [
     BrowserModule,

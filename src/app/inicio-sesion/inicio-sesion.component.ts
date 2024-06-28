@@ -41,6 +41,8 @@ export class InicioSesionComponent {
         console.log('Respuesta de login:', response);
         if (response && response.token) {
           console.log('Token:', response.token);
+          localStorage.setItem('token', response.token);
+          this.router.navigate(['/productos']);
 
         } else {
           console.error('No se recibio token en la respuesta.');

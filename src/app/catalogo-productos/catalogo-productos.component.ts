@@ -1,17 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from '../models/product';
 import { ProductosService } from '../service/productos.service';
+import { CarritoComprasService } from '../service/carrito-compras.service';
 
 @Component({
   selector: 'app-catalogo-productos',
   templateUrl: './catalogo-productos.component.html',
   styleUrls: ['./catalogo-productos.component.css']
 })
-export class CatalogoProductosComponent implements OnInit{
+export class CatalogoProductosComponent implements OnInit {
   products: Product[] = [];
-  selectedProduct: Product | null = null;
 
-  constructor(private productosService: ProductosService) { }
+  constructor(
+    private productosService: ProductosService,
+    private carritoService: CarritoComprasService
+  ) { }
 
   ngOnInit(): void {
     this.loadProducts();
@@ -23,7 +26,7 @@ export class CatalogoProductosComponent implements OnInit{
     });
   }
 
-  selectProduct(product: Product): void {
-    this.selectedProduct = product;
+  addToCarrito(product: Product): void {
+    this.carritoService.addToCarrito(product);
   }
 }

@@ -13,4 +13,9 @@ export class AuthService {
       tap(user => localStorage.setItem('token', JSON.stringify(user.token)))
     )
   }
+  isAuthenticatedUser(): boolean {
+    const token = localStorage.getItem('token');
+    console.log('Token en localStorage:', token);
+    return !!token; // Retorna true si el token existe y no está vacío
+  }
 }
